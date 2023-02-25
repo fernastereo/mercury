@@ -29,13 +29,6 @@ export default function Register() {
         );
     };
 
-    const handleSocialLogin = (event) => {
-        event.preventDefault();
-
-        //TODO: Implement social login
-        console.log("Social login is not implemented yet");
-    };
-
     const submit = (e) => {
         e.preventDefault();
 
@@ -144,8 +137,8 @@ export default function Register() {
                     <span className="h-px w-16 bg-gray-200"></span>
                 </div>
                 <div className="flex justify-center gap-5 w-full mb-4">
-                    <button
-                        onClick={handleSocialLogin}
+                    <a
+                        href={route("google-auth")}
                         className="w-full flex items-center justify-center mb-6 md:mb-0 border border-gray-300 hover:border-mercury-1 hover:bg-gray-200 text-sm text-gray-500 p-3 rounded-lg tracking-wide font-medium cursor-pointer hover:-translate-y-1 transition-all duration-500"
                     >
                         <svg
@@ -171,25 +164,7 @@ export default function Register() {
                             />
                         </svg>
                         <span>Google</span>
-                    </button>
-                    <button
-                        onClick={handleSocialLogin}
-                        className="w-full flex items-center justify-center mb-6 md:mb-0 border border-gray-300 hover:border-mercury-1 hover:bg-gray-200 text-sm text-gray-500 p-3 rounded-lg tracking-wide font-medium cursor-pointer hover:-translate-y-1 transition-all duration-500"
-                    >
-                        <svg
-                            className="mr-2"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20"
-                            viewBox="0 0 24 24"
-                        >
-                            <path
-                                fill="#4A90E2"
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-3 7h-1.924c-.615 0-1.076.252-1.076.889v1.111h3l-.238 3h-2.762v8h-3v-8h-2v-3h2v-1.923c0-2.022 1.064-3.077 3.461-3.077h2.539v3z"
-                            />
-                        </svg>
-                        <span>Facebook</span>
-                    </button>
+                    </a>
                 </div>
             </form>
         </GuestLayout>
