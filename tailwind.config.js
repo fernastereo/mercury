@@ -16,7 +16,8 @@ module.exports = {
                 ubuntu: ['Ubuntu'],
             },
             colors: {
-                'logo-color': '#78c26f',
+                'mercury-1': '#78c26f',
+                'mercury-2': '#60d853',
             },
         },
     },
